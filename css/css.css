@@ -1,0 +1,234 @@
+
+
+
+html{
+    height: 100%;
+}
+
+
+
+/* The entire scrollbar */
+::-webkit-scrollbar {
+
+    width: 12px; /* Width of the scrollbar */
+    height: 12px; /* Height of the scrollbar (for horizontal scrollbar) */
+}
+
+/* The scrollbar track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the track */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* The scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the thumb */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* The scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the thumb when hovered */
+}
+
+
+.search-input{
+    width: 30%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.main-content{
+    background: white;
+  border-radius: 7rem 7rem 0 0;
+   width: 95%;
+   height: 120vh;
+   flex-direction: column;
+   margin-inline: auto;
+   display: flex;
+   margin-top: auto;
+}
+
+
+@media screen and (max-width:900px) {
+
+    .main-content{
+        width: 100%;
+        border-radius: 2rem 2rem 0 0;
+    }
+
+    .search-input{
+        width: 50%;
+    }
+
+
+
+}
+
+
+body{
+   min-height: 100%;
+
+    background: #00e6ac;
+
+}
+
+*{
+    font-family: Tahoma, Arial,sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    word-break: break-all;
+}
+
+
+.full{
+    flex-direction: column;
+    display: flex;
+
+    height: 100%;
+    width: 100%;
+}
+
+
+.padding-top{
+    padding-top: 2rem;
+}
+
+
+ol{
+    list-style-position: inside;
+}
+
+.phone-item{
+    border: solid rgb(61, 61, 61) 1px; width: 90%;
+    opacity: 0.8;
+    background: white;
+   margin-top: 1rem;
+   transition: all 0.2s ease-in-out;
+    margin-inline: auto;
+    padding-top: 15px;
+    padding-right: 10px;
+    font-size: 1.2rem;
+    padding-left: 10px;
+    padding-bottom: 15px;
+
+    border-radius: 10px
+}
+
+
+.phone-item:hover{
+    cursor: pointer;
+   background: #b7f3ec;
+    translate: 20px;
+    opacity: 1;
+
+}
+
+.shadow{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.add-btn{
+    border: none;
+    padding-inline: 40px;
+    background: black;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding-top: 10px;
+    transition: all 0.2s ease-in-out;
+    padding-bottom: 10px;
+    border-radius: 1rem;"
+
+}
+
+.add-btn:hover{
+    translate: 0 -5px;
+}
+
+.my-button{
+
+
+    font-size: 1.5rem;
+    cursor: pointer;
+     color: white; border: none; padding: 15px; border-radius: 10px;
+}
+
+
+.my-input{
+
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+
+
+/* Modal container */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+/* Modal content */
+.modal-content {
+    animation-name: modalopen;
+    animation-duration: 0.4s;
+    background-color: #fefefe;
+    border-radius: 10px;
+
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid black;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+
+@media screen and (max-width:900px) {
+
+
+    .modal-content {
+
+        margin-inline: auto;
+        width: 100%; ;
+    }
+
+}
+
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+@keyframes modalopen {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}

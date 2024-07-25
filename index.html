@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Phone Book</title>
+ <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+ <link rel="stylesheet" type="text/css" href="./css/css.css">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+
+
+
+ <script  src="./js/index.js"></script>
+
+
+</head>
+
+<body>
+
+
+
+<div class="full ">
+
+ <div class="padding-top"></div>
+ <div class="padding-top"></div>
+
+ <h1 style="text-align: center; color: #03815e">Phone Book <i class="fa fa-address-book"></i> </h1>
+
+ <div class="padding-top"></div>
+ <div class="padding-top"></div>
+
+
+
+<main class="main-content">
+
+
+
+ <div class="padding-top"></div>
+ <div class="padding-top"></div>
+
+
+ <div  style=" width: 100%; text-align: center">
+
+
+  <input class="search-input" id="search" type="text" placeholder="Search...">
+
+
+  <div class="padding-top"></div>
+
+
+  <div style="display: flex; width: 100%; text-align: center;">
+   <div style="margin: auto">
+
+  <button id="addBtn" class="add-btn">
+
+   <span>Add</span>
+
+   <i style="margin-left: 10px" class="fa fa-plus"></i>
+  </button>
+
+
+    <button id="clearAll" style="background: #ececec; color: black" class="add-btn">
+
+     <span>Clear</span>
+
+     <i style="margin-left: 10px" class="fa fa-trash"></i>
+    </button>
+
+
+   </div>
+
+  </div>
+
+ </div>
+
+
+
+ <div class="padding-top"></div>
+
+ <h3 id="empty" style="text-align: center; display: none; color: #414141">List is empty <i class="fa fa-exclamation-triangle"></i> </h3>
+
+ <div style="overflow-y: auto;">
+ <ol id="the-list" style="padding-inline: 8%"></ol>
+ </div>
+
+ <div class="padding-top"></div>
+
+
+</main>
+
+
+
+
+ <footer style="background: #212121; margin-top: auto; height: 8vh; min-height: 60px">
+
+  <div class="full">
+   <h4 style="margin: auto; color: white">2024 &copy;</h4>
+
+  </div>
+
+</footer>
+
+
+</div>
+
+
+
+
+<template id="list-item">
+
+ <div  style="display: flex;" class="phone-item shadow">
+
+  <img  alt="img" width="70px" style="border-radius: 2rem; object-fit: fill">
+
+  <li style="margin-left: 10px; margin-top: auto; margin-bottom: auto"></li>
+
+
+<!-- <div style="display:  flex; gap: 10px; margin-left: auto">
+  <i  class="fa fa-user"></i>
+  <i  class="fa fa-edit"></i>
+ <i  class="fa fa-trash"></i>
+
+</div>-->
+
+ </div>
+
+</template>
+
+
+
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+   <span class="close">&times;</span>
+   <h2 id="title">Contact</h2>
+
+   <div class="padding-top"></div>
+
+   <form>
+
+
+    <h3>Name</h3>
+    <input class="my-input" style="width: 100%;" id="name" type="text" minlength="1" required placeholder="Name">
+    <br><br>
+
+    <h3>Phone Number</h3>
+    <input class="my-input" style="width: 100%;" id="phone" type="tel"  required placeholder="Phone number">
+
+    <br><br>
+
+    <h3>Email</h3>
+    <input class="my-input" style="width: 100%;" id="email" type="text" placeholder="Email">
+
+    <br><br>
+
+    <h3>Address</h3>
+    <input class="my-input" style="width: 100%;" id="address" type="text" placeholder="Address">
+
+
+    <div class="padding-top"></div>
+
+
+    <h3>Image</h3>
+
+
+    <input id="upload" style="display: none" type="file">
+
+    <img style="border-radius: 1rem; cursor: pointer; height: auto; width: 100%; max-width: 300px;"  id="img">
+
+    <br>
+    <br>
+    <br>
+
+    <div style="display: flex; gap: 5px">
+    <button id="save_btn" style="background: blue;" class="my-button">Save</button>
+
+    <button role="button" type="button" style="background: red;" id="remove_btn" class="my-button">remove</button>
+    </div>
+
+   </form>
+
+
+  </div>
+</div>
+
+
+
+
+</body>
+
+
+
+
+</html>
